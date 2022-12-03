@@ -1,30 +1,8 @@
-import { Roles } from './roles.model';
-
-export const NoRol = {
+export const SecureRoutes = {
   HOME: 'home',
   SECURE: 'secure',
-};
-
-export const AdminRol = {
-  rol: Roles.ADMIN,
-  routes: {
-    DASHBOARDADM: 'dashboardadm',
-    ...NoRol,
-  },
-};
-
-export const UserRol = {
-  rol: Roles.USER,
-  routes: {
-    DASHBOARD: 'dashboard',
-    ...NoRol,
-  },
-};
-
-export const SecureRoutes = {
-  ...AdminRol.routes,
-  ...UserRol.routes,
-  ...NoRol,
+  DASHBOARD: 'dashboard',
+  DASHBOARDADM: 'dashboardadm',
 };
 
 export const PublicRoutes = {
